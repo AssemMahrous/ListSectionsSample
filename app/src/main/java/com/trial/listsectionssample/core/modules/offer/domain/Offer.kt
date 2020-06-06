@@ -8,7 +8,7 @@ data class Offer(
     val title: String? = null,
     val tags: String? = null,
     val favorite: Int? = null,
-    val id: String? = null,
+    val id: Int? = null,
     val isHead: Boolean,
     val price: Price? = null,
     val redemptionsCap: String? = null,

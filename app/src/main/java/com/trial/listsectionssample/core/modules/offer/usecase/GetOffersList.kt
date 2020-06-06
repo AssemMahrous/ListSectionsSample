@@ -12,9 +12,9 @@ class GetOffersList @Inject constructor(val offersRepository: OffersRepositoryIn
         return offersRepository.getAllOffers().flatMap { payload ->
             val list = arrayListOf<Offer>()
             for (section in payload.sections) {
-                list.add(mapToOfferListDomain(true, null))
+                list.add(mapToOfferListDomain(true, null, section.title))
                 for (item in section.items)
-                    list.add(mapToOfferListDomain(false, item))
+                    list.add(mapToOfferListDomain(false, item, ""))
             }
             Single.just(Pair(payload.title, list))
         }

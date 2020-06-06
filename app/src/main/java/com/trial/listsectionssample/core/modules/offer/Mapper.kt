@@ -5,15 +5,15 @@ import com.trial.listsectionssample.core.modules.offer.entities.Item
 import com.trial.listsectionssample.core.modules.offer.entities.OfferDetailPayload
 
 object Mapper {
-    fun mapToOfferListDomain(type: Boolean, item: Item?): Offer =
+    fun mapToOfferListDomain(type: Boolean, item: Item?, title: String): Offer =
         Offer(
             isHead = type,
             image = item?.imageUrl,
             brand = item?.brand,
             favorite = item?.favoriteCount,
-            id = item?.detailUrl?.substringAfterLast("\\/"),
+            id = item?.detailUrl?.substringAfterLast("\\/")?.toInt(),
             tags = item?.tags,
-            title = item?.title
+            title = if (type) title else item?.title
         )
 
     fun mapToOfferDetailDomain(item: OfferDetailPayload): Offer =
@@ -21,7 +21,7 @@ object Mapper {
             isHead = false,
             title = item.title,
             tags = item.tags,
-            id = item.id.toString(),
+            id = item.id,
             favorite = item.favoriteCount,
             brand = item.brand,
             image = item.imageUrl,

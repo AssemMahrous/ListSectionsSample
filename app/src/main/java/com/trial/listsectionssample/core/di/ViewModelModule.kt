@@ -18,6 +18,7 @@ package com.trial.listsectionssample.core.di
 
 import androidx.lifecycle.ViewModel
 import com.trial.listsectionssample.features.main.MainViewModel
+import com.trial.listsectionssample.features.offers.OffersViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -30,4 +31,9 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(MainViewModel::class)
     abstract fun bindMainViewModel(mainViewModel: MainViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(OffersViewModel::class)
+    abstract fun bindOffersViewModel(offersViewModel: OffersViewModel): ViewModel
 }
