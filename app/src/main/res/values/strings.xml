@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ListSectionsSample</string>
+    <string name="generic_error">something wrong happened</string>
+    <string name="error_no_connection">No internet Connection</string>
+    <string name="unauthorized">Unauthorized</string>
+
+</resources>
