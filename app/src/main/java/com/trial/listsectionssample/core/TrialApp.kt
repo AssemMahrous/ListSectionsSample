@@ -26,6 +26,7 @@ class TrialApp : Application(), HasActivityInjector {
 
     override fun onCreate() {
         super.onCreate()
+        context = this
         AppInjector.init(this)
         if (DEBUG) {
             Logger.addLogAdapter(AndroidLogAdapter())

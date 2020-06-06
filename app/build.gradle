@@ -30,11 +30,11 @@ android {
         stage {
             dimension = 'default'
             versionNameSuffix ".Stage"
-            buildConfigField 'String', 'SERVER_URL', '"https://https://www.nasable.com/luckytest/api/"'
+            buildConfigField 'String', 'SERVER_URL', '"https://www.nasable.com/luckytest/api/"'
         }
         production {
             dimension = 'default'
-            buildConfigField 'String', 'SERVER_URL', '"https://https://www.nasable.com/luckytest/api/"'
+            buildConfigField 'String', 'SERVER_URL', '"https://www.nasable.com/luckytest/api/"'
         }
 
     }

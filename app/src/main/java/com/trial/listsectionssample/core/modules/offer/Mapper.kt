@@ -11,7 +11,7 @@ object Mapper {
             image = item?.imageUrl,
             brand = item?.brand,
             favorite = item?.favoriteCount,
-            id = item?.detailUrl?.substringAfterLast("\\/")?.toInt(),
+            id = item?.detailUrl?.substringAfterLast("/")?.toInt(),
             tags = item?.tags,
             title = if (type) title else item?.title
         )
