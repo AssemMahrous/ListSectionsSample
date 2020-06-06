@@ -16,11 +16,18 @@
 
 package com.trial.listsectionssample.core.di
 
+import androidx.lifecycle.ViewModel
+import com.trial.listsectionssample.features.main.MainViewModel
+import dagger.Binds
 import dagger.Module
+import dagger.multibindings.IntoMap
 
 
 @Suppress("unused")
 @Module
 abstract class ViewModelModule {
-
+    @Binds
+    @IntoMap
+    @ViewModelKey(MainViewModel::class)
+    abstract fun bindMainViewModel(mainViewModel: MainViewModel): ViewModel
 }

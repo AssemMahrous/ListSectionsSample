@@ -16,11 +16,17 @@
 
 package com.trial.listsectionssample.core.di
 
+import com.trial.listsectionssample.core.modules.offer.data.OffersRepository
+import com.trial.listsectionssample.core.modules.offer.data.OffersRepositoryInterface
+import dagger.Binds
 import dagger.Module
+import javax.inject.Singleton
 
 
 @Suppress("unused")
 @Module
 abstract class RepositoriesModule {
-
+    @Binds
+    @Singleton
+    abstract fun bindOffersRepository(offersRepository: OffersRepository): OffersRepositoryInterface
 }
