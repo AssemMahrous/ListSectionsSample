@@ -2,13 +2,13 @@ package com.trial.listsectionssample.features.offers
 
 import androidx.lifecycle.MutableLiveData
 import com.trial.listsectionssample.core.modules.offer.domain.Offer
-import com.trial.listsectionssample.core.modules.offer.usecase.GetOffersList
+import com.trial.listsectionssample.core.modules.offer.usecase.GetOffersListUseCase
 import ibtikar.tania.user.core.platform.BaseViewModel
 import io.reactivex.functions.Consumer
 import javax.inject.Inject
 
 class OffersViewModel @Inject constructor(
-    private val getOffersList: GetOffersList
+    private val getOffersList: GetOffersListUseCase
 ) : BaseViewModel() {
 
     val list = MutableLiveData<List<Offer>>()

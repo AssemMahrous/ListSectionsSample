@@ -9,8 +9,14 @@
         android:name="com.trial.listsectionssample.features.offers.OffersFragment"
         android:label="offer_fragment"
         tools:layout="@layout/fragment_offers">
-        <!--        <action-->
-        <!--            android:id="@+id/action_offerFragment_to_detailFragment"-->
-        <!--            app:destination="@id/detailFragment" />-->
+        <action
+            android:id="@+id/action_offerFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.trial.listsectionssample.features.offerdetail.OfferDetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_offer_detail" />
 </navigation>
