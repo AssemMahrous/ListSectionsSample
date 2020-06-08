@@ -24,9 +24,11 @@
 
     <TextView
         android:id="@+id/tv_brand"
+        style="@style/TextAppearance.sfPro.regular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:textAllCaps="true"
         android:textColor="@color/brand_color"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@id/offer_image_card"
@@ -35,6 +37,7 @@
 
     <TextView
         android:id="@+id/tv_fav_count"
+        style="@style/TextAppearance.sfPro.regular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/ic_heart_small"
@@ -47,6 +50,7 @@
 
     <TextView
         android:id="@+id/tv_title"
+        style="@style/TextAppearance.sfPro.bold"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
@@ -54,7 +58,6 @@
         android:maxLines="2"
         android:textColor="@color/title_text_color"
         android:textSize="16sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/tv_brand"
         app:layout_constraintTop_toBottomOf="@id/tv_brand"
@@ -62,6 +65,7 @@
 
     <TextView
         android:id="@+id/tv_tags"
+        style="@style/TextAppearance.sfPro.regular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/brand_color"

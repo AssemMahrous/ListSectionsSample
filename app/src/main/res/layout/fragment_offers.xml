@@ -8,6 +8,7 @@
 
     <TextView
         android:id="@+id/tv_offer_title_header"
+        style="@style/TextAppearance.apercu.bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/title_bg_color"

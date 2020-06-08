@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/title_bg_color"
-        android:padding="10dp"
+        android:padding="5dp"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -21,6 +21,7 @@
             android:layout_marginStart="20dp"
             android:padding="5dp"
             android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,6 +32,7 @@
             android:layout_marginEnd="20dp"
             android:padding="5dp"
             android:src="@drawable/ic_heart"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,6 +44,7 @@
             android:layout_marginEnd="10dp"
             android:padding="5dp"
             android:src="@drawable/ic_share"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/heart_image"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -67,6 +70,7 @@
 
             <TextView
                 android:id="@+id/tv_brand_title"
+                style="@style/TextAppearance.sfPro.medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -79,6 +83,7 @@
 
             <TextView
                 android:id="@+id/tv_fav"
+                style="@style/TextAppearance.sfPro.medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -93,6 +98,7 @@
 
             <TextView
                 android:id="@+id/tv_offer_title"
+                style="@style/TextAppearance.sfPro.medium"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -105,6 +111,7 @@
 
             <TextView
                 android:id="@+id/tv_offer_description"
+                style="@style/TextAppearance.sfPro.light"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -117,6 +124,7 @@
 
             <TextView
                 android:id="@+id/tv_price_title"
+                style="@style/TextAppearance.sfPro.regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="48dp"
@@ -128,6 +136,7 @@
 
             <TextView
                 android:id="@+id/tv_price_old"
+                style="@style/TextAppearance.sfPro.regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/strike_through"
@@ -140,6 +149,7 @@
 
             <TextView
                 android:id="@+id/tv_price_new"
+                style="@style/TextAppearance.sfPro.medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="14dp"
@@ -151,6 +161,7 @@
 
             <TextView
                 android:id="@+id/tv_expiration"
+                style="@style/TextAppearance.sfPro.regular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="24dp"
@@ -163,6 +174,7 @@
 
             <TextView
                 android:id="@+id/tv_redemption_title"
+                style="@style/TextAppearance.sfPro.medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="48dp"
@@ -175,6 +187,7 @@
 
             <TextView
                 android:id="@+id/tv_redemption_value"
+                style="@style/TextAppearance.sfPro.medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"

@@ -16,6 +16,26 @@
         <item name="android:windowIsTranslucent">false</item>
     </style>
 
+    <style name="TextAppearance.sfPro.light" parent="android:TextAppearance">
+        <item name="android:fontFamily">@font/sf_pro_light</item>
+    </style>
+
+    <style name="TextAppearance.sfPro.medium" parent="android:TextAppearance">
+        <item name="android:fontFamily">@font/sf_pro_medium</item>
+    </style>
+
+    <style name="TextAppearance.sfPro.regular" parent="android:TextAppearance">
+        <item name="android:fontFamily">@font/sf_pro_regular</item>
+    </style>
+
+    <style name="TextAppearance.sfPro.bold" parent="android:TextAppearance">
+        <item name="android:fontFamily">@font/sf_pro_bold</item>
+    </style>
+
+    <style name="TextAppearance.apercu.bold" parent="android:TextAppearance">
+        <item name="android:fontFamily">@font/apercu_bold</item>
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
