@@ -18,5 +18,9 @@
         android:id="@+id/detailFragment"
         android:name="com.trial.listsectionssample.features.offerdetail.OfferDetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_offer_detail" />
+        tools:layout="@layout/fragment_offer_detail">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
 </navigation>
