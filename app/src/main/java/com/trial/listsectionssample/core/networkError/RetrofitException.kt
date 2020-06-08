@@ -6,31 +6,27 @@ import java.io.IOException
 
 class RetrofitException(
     private val _message: String?,
-    private val _url: String?,
     private val _response: Response<*>?,
     private val _kind: Kind,
-    private val _exception: Throwable?,
-    private val _retrofit: Retrofit?
+    private val _exception: Throwable?
 ) : RuntimeException(_message, _exception) {
 
     companion object {
         fun httpError(url: String, response: Response<*>, retrofit: Retrofit): RetrofitException {
             val message = response.code().toString() + " " + response.message()
-            return RetrofitException(message, url, response, Kind.HTTP, null, retrofit)
+            return RetrofitException(message, response, Kind.HTTP, null)
         }
 
         fun networkError(exception: IOException): RetrofitException {
-            return RetrofitException(exception.message, null, null, Kind.NETWORK, exception, null)
+            return RetrofitException(exception.message, null, Kind.NETWORK, exception)
         }
 
         fun unexpectedError(exception: Throwable): RetrofitException {
             return RetrofitException(
                 exception.message,
                 null,
-                null,
                 Kind.UNEXPECTED,
-                exception,
-                null
+                exception
             )
         }
     }

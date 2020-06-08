@@ -28,7 +28,7 @@ class OfferDetailFragment : BaseFragment<OfferDetailViewModel>() {
     override fun getBaseViewModel() = viewModel
 
     override fun getBaseViewModelFactory() = viewModelFactory
-
+    val args by navArgs<OfferDetailFragmentArgs>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

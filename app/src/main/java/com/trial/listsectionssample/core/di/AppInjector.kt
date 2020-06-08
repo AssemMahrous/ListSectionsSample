@@ -18,13 +18,13 @@ package com.trial.listsectionssample.core.di
 
 import android.app.Activity
 import android.app.Application
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
+import com.trial.listsectionssample.R
 import com.trial.listsectionssample.core.TrialApp
 import dagger.android.AndroidInjection
 import dagger.android.support.AndroidSupportInjection
@@ -53,7 +53,7 @@ object AppInjector {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     activity.window.decorView.systemUiVisibility =
                         View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-                    activity.window.statusBarColor = Color.WHITE
+                    activity.window.statusBarColor = activity.getColor(R.color.title_bg_color)
                 }
                 handleActivity(activity)
             }

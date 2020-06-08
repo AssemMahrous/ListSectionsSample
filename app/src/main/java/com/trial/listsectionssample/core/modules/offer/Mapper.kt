@@ -2,7 +2,7 @@ package com.trial.listsectionssample.core.modules.offer
 
 import com.trial.listsectionssample.core.modules.offer.domain.Offer
 import com.trial.listsectionssample.core.modules.offer.entities.Item
-import com.trial.listsectionssample.core.modules.offer.entities.OfferDetailPayload
+import com.trial.listsectionssample.core.modules.offer.entities.OfferDetailsResponse
 
 object Mapper {
     fun mapToOfferListDomain(type: Boolean, item: Item?, title: String): Offer =
@@ -16,7 +16,7 @@ object Mapper {
             title = if (type) title else item?.title
         )
 
-    fun mapToOfferDetailDomain(item: OfferDetailPayload): Offer =
+    fun mapToOfferDetailDomain(item: OfferDetailsResponse): Offer =
         Offer(
             isHead = false,
             title = item.title,

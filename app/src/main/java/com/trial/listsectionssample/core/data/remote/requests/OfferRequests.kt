@@ -1,6 +1,6 @@
 package com.trial.listsectionssample.core.data.remote.requests
 
-import com.trial.listsectionssample.core.modules.offer.entities.OfferDetailPayload
+import com.trial.listsectionssample.core.modules.offer.entities.OfferDetailsResponse
 import com.trial.listsectionssample.core.modules.offer.entities.OffersPayload
 import io.reactivex.Single
 import retrofit2.http.GET
@@ -13,5 +13,5 @@ interface OfferRequests {
     ): Single<OffersPayload>
 
     @GET("offers/{id}")
-    fun getOfferDetail(@Path("id") id: Int): Single<OfferDetailPayload>
+    fun getOfferDetail(@Path("id") id: Int): Single<OfferDetailsResponse>
 }

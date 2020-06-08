@@ -25,11 +25,9 @@ class OffersFragment : BaseFragment<OffersViewModel>() {
 
     override fun getBaseViewModelFactory() = viewModelFactory
     private val offersAdapter = OffersAdapter {
-        val bundle =
-            bundleOf("id" to it)
         findNavController().navigate(
             R.id.action_offerFragment_to_detailFragment,
-            bundle,
+            OfferDetailFragmentArgs(it).toBundle(),
             null,
             null
         )
@@ -44,18 +42,21 @@ class OffersFragment : BaseFragment<OffersViewModel>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         offers_list.adapter = offersAdapter
+        btn_try.setOnClickListener {
+            hideNoInternetConnection()
+            viewModel.getOffers()
+        }
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         viewModel.list.observe(this.viewLifecycleOwner, Observer {
             offersAdapter.submitList(it)
         })
         viewModel.title.observe(this.viewLifecycleOwner, Observer {
             tv_offer_title_header.text = it
         })
-
         viewModel.getOffers()
-        btn_try.setOnClickListener {
-            hideNoInternetConnection()
-            viewModel.getOffers()
-        }
     }
 
     override fun showNoInternetConnection() {
