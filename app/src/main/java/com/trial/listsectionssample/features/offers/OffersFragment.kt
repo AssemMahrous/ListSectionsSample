@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.trial.listsectionssample.R
+import com.trial.listsectionssample.core.platform.BaseFragment
 import com.trial.listsectionssample.core.platform.ViewModelFactory
-import ibtikar.tania.user.core.platform.BaseFragment
+import com.trial.listsectionssample.features.offerdetail.OfferDetailFragmentArgs
 import kotlinx.android.synthetic.main.fragment_offers.*
 import kotlinx.android.synthetic.main.no_connection_layout.*
 import javax.inject.Inject
@@ -66,5 +66,4 @@ class OffersFragment : BaseFragment<OffersViewModel>() {
     private fun hideNoInternetConnection() {
         no_connection.visibility = View.GONE
     }
-
 }

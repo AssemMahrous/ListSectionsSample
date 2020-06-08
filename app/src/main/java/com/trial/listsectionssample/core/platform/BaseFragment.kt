@@ -1,4 +1,4 @@
-package ibtikar.tania.user.core.platform
+package com.trial.listsectionssample.core.platform
 
 import android.os.Bundle
 import android.view.View
@@ -7,9 +7,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.trial.listsectionssample.R
 import com.trial.listsectionssample.core.di.Injectable
-import com.trial.listsectionssample.core.platform.ErrorType
-import com.trial.listsectionssample.core.platform.Status
-import com.trial.listsectionssample.core.platform.ViewModelFactory
 import com.trial.listsectionssample.core.utils.Utils
 
 

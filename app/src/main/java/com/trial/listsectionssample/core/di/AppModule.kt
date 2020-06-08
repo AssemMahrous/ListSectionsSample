@@ -27,13 +27,12 @@ class AppModule {
         okHttpClient: OkHttpClient,
         gson: Gson
     ): Retrofit {
-        val retrofit = Retrofit.Builder()
+        return Retrofit.Builder()
             .baseUrl(BuildConfig.SERVER_URL)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .addCallAdapterFactory(adapterFactory)
             .client(okHttpClient)
             .build()
-        return retrofit
     }
 
     @Singleton
@@ -43,12 +42,11 @@ class AppModule {
         if (BuildConfig.DEBUG)
             logging.level = HttpLoggingInterceptor.Level.BODY
         else logging.level = HttpLoggingInterceptor.Level.NONE
-        val okHttpClient = OkHttpClient.Builder()
+        return OkHttpClient.Builder()
             .readTimeout(1, TimeUnit.MINUTES)
             .connectTimeout(1, TimeUnit.MINUTES)
             .addInterceptor(logging)
             .build()
-        return okHttpClient
     }
 
     @Singleton
@@ -63,8 +61,7 @@ class AppModule {
     @Singleton
     @Provides
     fun provideRemoteDataSource(retrofit: Retrofit): RemoteDataSource {
-        val remoteDataSourceImpl = RemoteDataSourceImpl(retrofit)
-        return remoteDataSourceImpl
+        return RemoteDataSourceImpl(retrofit)
     }
 
     @Singleton

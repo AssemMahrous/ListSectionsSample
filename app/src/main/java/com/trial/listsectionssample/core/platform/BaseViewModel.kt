@@ -1,12 +1,9 @@
-package ibtikar.tania.user.core.platform
+package com.trial.listsectionssample.core.platform
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.trial.listsectionssample.R
 import com.trial.listsectionssample.core.networkError.RetrofitException
-import com.trial.listsectionssample.core.platform.ApplicationException
-import com.trial.listsectionssample.core.platform.ErrorType
-import com.trial.listsectionssample.core.platform.Status
 import io.reactivex.Completable
 import io.reactivex.Observable
 import io.reactivex.Scheduler

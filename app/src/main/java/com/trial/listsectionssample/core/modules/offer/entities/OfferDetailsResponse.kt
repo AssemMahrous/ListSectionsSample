@@ -1,6 +1,6 @@
 package com.trial.listsectionssample.core.modules.offer.entities
 
-data class OfferDetailPayload(
+data class OfferDetailsResponse(
     val brand: String,
     val favoriteCount: Int,
     val id: Int,

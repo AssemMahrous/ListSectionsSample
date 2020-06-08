@@ -6,10 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.trial.listsectionssample.R
+import com.trial.listsectionssample.core.platform.BaseFragment
 import com.trial.listsectionssample.core.platform.ViewModelFactory
 import com.trial.listsectionssample.core.utils.Utils.loadImage
-import ibtikar.tania.user.core.platform.BaseFragment
 import kotlinx.android.synthetic.main.fragment_offer_detail.*
 import kotlinx.android.synthetic.main.fragment_offers.no_connection
 import kotlinx.android.synthetic.main.no_connection_layout.*
@@ -49,10 +50,10 @@ class OfferDetailFragment : BaseFragment<OfferDetailViewModel>() {
             tv_expiration.text = it.expiration
             tv_redemption_value.text = it.redemptionsCap
         })
-        viewModel.getDetail(requireArguments().getInt("id"))
+        viewModel.getDetail(args.id)
         btn_try.setOnClickListener {
             hideNoInternetConnection()
-            viewModel.getDetail(requireArguments().getInt("id"))
+            viewModel.getDetail(args.id)
         }
         back_image.setOnClickListener {
             findNavController().navigateUp()

@@ -11,7 +11,6 @@ import com.trial.listsectionssample.R
 import com.trial.listsectionssample.core.utils.Utils
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
-import ibtikar.tania.user.core.platform.BaseViewModel
 import javax.inject.Inject
 
 

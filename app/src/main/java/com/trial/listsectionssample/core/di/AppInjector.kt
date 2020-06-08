@@ -34,8 +34,7 @@ import dagger.android.support.HasSupportFragmentInjector
  * Helper class to automatically inject fragments if they implement [Injectable].
  */
 object AppInjector {
-    lateinit var appComponent: AppComponent
-    fun isThingInitialized() = AppInjector::appComponent.isInitialized
+    private lateinit var appComponent: AppComponent
     fun init(trialApp: TrialApp) {
         if (!AppInjector::appComponent.isInitialized)
             appComponent = DaggerAppComponent.builder()
@@ -47,6 +46,7 @@ object AppInjector {
         trialApp.registerActivityLifecycleCallbacks(object :
             Application.ActivityLifecycleCallbacks {
             override fun onActivitySaveInstanceState(p0: Activity, p1: Bundle) {
+                // no-op
             }
 
             override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
